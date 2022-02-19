@@ -1,0 +1,111 @@
+﻿{% load static %}
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Distances btn two cities App</title>
+    <link href="{% static 'Content/bootstrap.min.css' %}?ver=2" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <script src="https://kit.fontawesome.com/ab2155e76b.js" crossorigin="anonymous"></script>
+<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link href="{% static 'css/App.css' %}?ver=2" rel="stylesheet" type="text/css"/>
+    <link href="{% static 'css/styles.css' %}?ver=2" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+  
+
+    <div class="jumbotron">
+        <div class="container-fluid">
+            <h1>Track&GO</h1>
+
+
+
+                <table border="1" cellpadding="5" cellspacing="0" style="width: 100%;" id="table1">
+                    <form action="" method="post">
+		        <tr height="70px">
+
+					<td >
+                        {% csrf_token %}
+                {% for field in form1  %}
+                  <div class="col-sm-6">
+                    <b>{{ field.label_tag }}</b> - {{ field }}
+                  </div>
+                {% endfor %}</td>
+					<td>
+            <input class="btn btn-submit form-submit-button" type="submit", value="Predict Destination">
+
+					</td>
+
+				</tr>
+                        </form>
+
+                    <tr height="70px">
+
+					<td >
+                        {% csrf_token %}
+                {% for field in form2  %}
+                  <div class="col-sm-6">
+                    {{ field.label_tag }} - {{ field }}
+                  </div>
+                {% endfor %}
+
+                    </td>
+					<td>
+            <button class="btn btn-submit form-submit-button" onclick="calcRoute('{{destination}}');"> Go </button>
+
+					</td>
+
+				</tr>
+		</table>
+
+            </form>
+
+
+
+            <div style="padding-top: 10px;">
+    <table border="1" cellpadding="5" cellspacing="0" style="width: 100%;" id="">
+		<tr>
+
+					<th >Find Nearby Places</th>
+					<td>
+
+						<select id="scenario" name='scenario' onchange="drawplaces('{{destination}}', this.value)">
+						<option value=''>Select Place</option>
+						<option value="restaurant">Restaurant</option>
+						<option value="atm">ATM</option>
+						<option value="hospital">Hospital</option>
+						</select>
+					</td>
+                    <td>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</td>
+                    <td><button class="btn btn-submit form-submit-button" style="background-color: red;"
+                                "> GO </button>
+
+                    </td>
+				</tr>
+		</table>
+            </div>
+
+            <div class="col-xs-offset-2 col-xs-10">
+
+
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div id="googleMap">
+
+            </div>
+            <div id="output">
+
+            </div>
+        </div>
+
+    </div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=[Your-Key]&libraries=places"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+     <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <!--<script src="{% static 'Scripts/jquery-3.1.1.min.js' %}?ver=2"></script>-->
+    <script src="{% static 'Main.js' %}?ver=2"></script>
+</body>
+</html>
