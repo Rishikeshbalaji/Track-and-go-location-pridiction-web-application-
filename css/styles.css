@@ -1,0 +1,336 @@
+/*@import url('https://fonts.googleapis.com/css?family=Raleway:300,400,700');
+@import url("https://fonts.googleapis.com/css?family=Metal+Mania");*/
+
+@font-face {
+    font-family: "Booter - Zero Zero";
+    src: url("Fonts/Booter - Zero Zero.woff") format("woff"),
+         url("Fonts/Booter - Zero Zero.woff2") format("woff2");
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: Raleway;
+    color: #777;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    min-height: 100%;
+  background-color: #F8F8F8	;
+}
+
+input,select{width: 99%;}
+*{
+	box-sizing: border-box;
+	word-wrap: break-word;
+}
+.vl{
+  border-top: 6px solid #808080;
+  height: 5px;
+}
+
+
+.content-section {
+    margin: 1em;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 1.5em;
+}
+
+.header-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 1.5em;
+	display:flex;
+}
+
+.section-header {
+    font-family: "Metal Mania";
+    font-weight: normal;
+    color: #808080;
+    text-align: left;
+    font-size: 2.5em;
+}
+.fixed {
+    width: 100%;
+	text-align: left;
+}
+.flex-item {
+    width: 100%;
+	font-family: "Metal Mania";
+    font-weight: normal;
+    color: #808080;
+    text-align: right;
+    font-size: 1.5em;
+}
+
+
+.main-footer {
+            max-width: 100%;
+            max-height: 100vh;
+            margin: auto;
+}
+
+.footer-box {
+            display: grid;
+            height: 100%;
+        }
+
+.main-footer-container {
+    display: flex;
+    align-items: center;
+}
+
+.main-footer-container ul {
+    flex-grow: 1;
+    text-align: end;
+}
+
+
+.btn {
+    text-align: center;
+    vertical-align: middle;
+    padding: .67em .67em;
+    cursor: pointer;
+}
+
+.btn-header {
+    margin: .5em 15% 2em 15%;
+    color: white;
+    border: 2px solid #2D9CDB;
+    background-color: rgba(255, 255, 255, .1);
+    border-radius: 0;
+    font-size: 1.5em;
+    font-weight: lighter;
+    padding-left: 2em;
+    padding-right: 2em;
+}
+
+.btn-header:hover {
+    background-color: rgba(255, 255, 255, .3);
+}
+
+
+.btn-primary {
+    color: white;
+    background-color: #56CCF2;
+    border: none;
+    border-radius: .3em;
+    font-weight: bold;
+}
+
+.btn-submit {
+	border: 0;
+	padding: 10px 30px;
+	width: 100%;
+    color: white;
+    background-color: #56CCF2;
+	border-radius: .3em;
+	font-size: larger;
+	font-weight: bold;
+	
+	}
+
+
+.btn-primary:hover {
+    background-color: #2D9CDB;
+}
+
+
+.shop-item {
+    margin: 10px;
+}
+
+.shop-item-title {
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.5em;
+    color: #808080;
+    margin-bottom: 15px;
+}
+
+.shop-item-image {
+    height: 250px;
+}
+
+.shop-item-details {
+    display: flex;
+    align-items: center;
+    padding: 5px;
+}
+
+.shop-item-price {
+    flex-grow: 1;
+    color: #333;
+}
+
+.shop-items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.cart-header {
+    font-weight: bold;
+    font-size: 1.25em;
+    color: #808080;
+}
+
+.cart-column {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid black;
+    margin-right: 1.5em;
+    padding-bottom: 10px;
+    margin-top: 10px;
+}
+
+.cart-row {
+    display: flex;
+}
+
+.cart-item {
+    width: 45%;
+}
+
+
+.cart-quantity {
+    width: 35%;
+}
+
+.cart-item-title {
+    color: #333;
+    margin-left: .5em;
+    font-size: 1.2em;
+}
+
+.cart-item-image {
+    width: 75px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.btn-danger {
+    color: white;
+    background-color: #EB5757;
+    border: none;
+    border-radius: .3em;
+    font-weight: bold;
+}
+
+.btn-danger:hover {
+    background-color: #CC4C4C;
+}
+
+.cart-quantity-input {
+    height: 34px;
+    width: 50px;
+    border-radius: 5px;
+    border: 1px solid #56CCF2;
+    background-color: #eee;
+    color: #333;
+    padding: 0;
+    text-align: center;
+    font-size: 1.2em;
+    margin-right: 25px;
+}
+
+.cart-row:last-child {
+    border-bottom: 1px solid black;
+}
+
+.cart-row:last-child .cart-column {
+    border: none;
+}
+
+.cart-total {
+    text-align: end;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
+.cart-total-title {
+    font-weight: bold;
+    font-size: 1.5em;
+    color: #808080;
+    margin-right: 20px;
+}
+
+.cart-total-price {
+    color: #808080;
+    font-size: 1.1em;
+}
+
+.btn-purchase {
+    display: block;
+    margin: 40px auto 80px auto;
+    font-size: 1.75em;
+}
+
+.btn-back {
+    color: white;
+    background-color: #56CCF2;
+    border: none;
+    border-radius: .3em;
+    font-weight: bold;
+	padding: 15px;
+	margin: 20px auto 40px auto;
+	
+}
+
+.btn-prediction-detail {
+    color: white;
+    background-color: #56CCF2;
+    border: none;
+    border-radius: .3em;
+    font-weight: bold;
+	padding: 15px;
+	margin: 20px auto 40px auto;
+	
+	
+	
+}
+
+.detail-container {
+	display:flex;
+	grid-gap: 1px;
+	padding: 0 1.5em;
+	height:100%;
+}
+
+.radon-detail{
+	background: linear-gradient(rgba(255,255,255,.9), rgba(255,255,255,.9)), url('C:/Users/artig/Documents/recommendation-sys/App/Images/radon.png');
+	background-size: 100% 100%;
+	height:100%;
+	width: 100%;
+
+}
+
+.radon-text {
+  top: 20%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  font-family: 'Georgia', serif;
+  font-weight: 600;
+  color: #56CCF2;
+  text-align: center;
+  font-size: 2em;
+}
+
+.top-right{
+	padding-right: 25px; 
+	padding-top: 40px; 
+	position: absolute; 
+	top: 0; right: 0;
+	width: 100px; 
+	text-align:center
+}
